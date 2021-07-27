@@ -64,6 +64,7 @@
     "dist/types/lib/jwt_producer.d.ts"
   ],
   "scripts": {
+    "build": "tsc",
     "build-all": "run-s clear build:*",
     "build-fast-all": "run-s clear build-fast:*",
     "build-fast:browser": "npm run-script runtime-browser && npm run-script -s esbuild-find | xargs -0 esbuild --log-level=warning --target=es2018 --outdir=dist/browser --format=esm && echo '{\"type\": \"module\"}'> dist/browser/package.json",
