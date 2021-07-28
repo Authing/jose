@@ -50,14 +50,13 @@
     }
   },
   "browser": "./dist/browser/index.js",
-  "module": "./dist/node/esm/index.js",
+  "module": "./dist/node/webcrypto/esm/index.js",
   "main": "./dist/node/cjs/index.js",
   "types": "index.d.ts",
   "files": [
     "dist/**/package.json",
     "dist/**/*.js",
     "dist/types/**/*.d.ts",
-    "!dist/node/webcrypto/**/*",
     "!dist/types/**/*.i.d.ts",
     "!dist/types/runtime/*",
     "!dist/types/lib/*",
