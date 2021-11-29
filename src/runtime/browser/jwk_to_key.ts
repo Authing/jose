@@ -116,8 +116,8 @@ const parse: JWKParseFunction = async (jwk: JWK): Promise<CryptoKey> => {
     keyData = base64url(jwk.k!)
   }
   return crypto.subtle.importKey(
-    format,
-    keyData,
+    format as 'raw',
+    keyData as BufferSource,
     algorithm,
     jwk.ext ?? false,
     <KeyUsage[]>jwk.key_ops ?? keyUsages,

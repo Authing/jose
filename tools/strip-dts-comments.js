@@ -1,6 +1,7 @@
 const { writeFileSync, readFileSync } = require("fs");
 
-const file = "./dist/types/types.d.ts";
+// const file = "../dist/types/types.d.ts";
+const file = "dist/types/index.d.ts";
 const types = readFileSync(file, { encoding: "utf-8" });
 
 const regexJSDocs = /^[\t\s]*\/\*\*[^!#*][\s\S]*?\*\/[\r\n]?/gm;
