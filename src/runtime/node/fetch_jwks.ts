@@ -1,5 +1,3 @@
-import { get as http } from 'http'
-import { get as https } from 'https'
 import { once } from 'events'
 import type { ClientRequest, IncomingMessage } from 'http'
 import type { RequestOptions } from 'https'
@@ -8,9 +6,9 @@ import type { FetchFunction } from '../interfaces'
 import { JOSEError } from '../../util/errors.js'
 import { concat, decoder } from '../../lib/buffer_utils.js'
 
-const protocols: { [protocol: string]: (...args: Parameters<typeof https>) => ClientRequest } = {
-  'https:': https,
-  'http:': http,
+const protocols: { [protocol: string]: (...args: Array<any>) => ClientRequest } = {
+  'https:': require('https').get,
+  'http:': require('http').get,
 }
 
 type AcceptedRequestOptions = Pick<RequestOptions, 'agent'>
