@@ -55,6 +55,7 @@ async function generateKeyPair(
   alg: string,
   options?: GenerateKeyPairOptions,
 ): Promise<{ privateKey: KeyLike; publicKey: KeyLike }> {
+  // @ts-ignore
   return generate(alg, options)
 }
 

@@ -68,7 +68,7 @@ export interface EcdhAllowedFunction {
   (key: unknown): boolean
 }
 export interface GenerateEpkFunction {
-  (key: unknown): Promise<KeyLike>
+  (key: unknown): Promise<any>
 }
 export interface EncryptFunction {
   (enc: string, plaintext: Uint8Array, cek: unknown, iv: Uint8Array, aad: Uint8Array): Promise<{
