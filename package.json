@@ -1,6 +1,6 @@
 {
   "name": "@authing/jose",
-  "version": "1.0.2-beta",
+  "version": "1.0.2-beta.2",
   "description": "Webpack v4 compatible version of panva/jose v3.x",
   "keywords": [
     "browser",
